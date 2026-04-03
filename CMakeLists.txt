@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 
+# Set board type for RP2350 (e.g. pico2)
+set(PICO_BOARD seeed_xiao_rp2350 CACHE STRING "Board type")
+set(PICO_PLATFORM rp2350-arm-s CACHE STRING "Platform type")
+
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
 
@@ -15,7 +19,6 @@ endif()
 pico_sdk_init()
 
 add_compile_options(-Wall)
-
 
 if (PICO_PLATFORM STREQUAL "host")
   add_subdirectory(test)

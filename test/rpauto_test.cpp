@@ -2,5 +2,6 @@
 
 TEST(rpauto, gpio)
 {
+    // TODO: dummy to be replaced with first actual test
 }
 
