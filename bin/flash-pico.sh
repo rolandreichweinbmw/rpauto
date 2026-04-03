@@ -2,8 +2,7 @@
 
 set -e
 
-#FILE=$1
-FILE=./build-pipico/src/cabletester.elf
+FILE=./build-can/src/rpauto.elf
 
 if [[ "$FILE" = "" ]] ; then
 	LIST=`find . -name '*.elf'`
@@ -19,4 +18,4 @@ fi
 
 echo "Using $FILE for flashing."
 
-openocd -f interface/cmsis-dap.cfg -f target/rp2040.cfg -c "adapter speed 5000" -c "program $FILE verify reset exit"
+openocd/openocd -s openocd/scripts -f interface/cmsis-dap.cfg -f target/rp2350.cfg -c "adapter speed 5000" -c "program $FILE verify reset exit"
