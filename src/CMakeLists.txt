@@ -2,7 +2,7 @@ include(FetchContent)
 FetchContent_Declare(
     etl
     GIT_REPOSITORY https://github.com/ETLCPP/etl
-    GIT_TAG        20.46.2
+    GIT_TAG        20.47.0
 )
 FetchContent_MakeAvailable(etl)
 
