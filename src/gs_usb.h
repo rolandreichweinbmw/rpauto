@@ -211,7 +211,9 @@ static constexpr size_t HOST_FRAME_SIZE_CANFD      = sizeof(host_frame_header) +
 static constexpr size_t HOST_FRAME_SIZE_CANFD_TS   = sizeof(host_frame_header) + sizeof(canfd_data_ts);
 static constexpr size_t HOST_FRAME_MAX_SIZE        = sizeof(host_frame);
 
-// Maximum USB packet size for CAN data endpoint (must fit largest frame)
-static constexpr uint16_t CAN_DATA_MAX_PACKET_SIZE = 128;
+// Maximum USB packet size for CAN data endpoint
+// Full-Speed USB bulk endpoint max is 64 bytes
+// Larger CAN-FD frames will be transferred across multiple USB packets
+static constexpr uint16_t CAN_DATA_MAX_PACKET_SIZE = 64;
 
 } // namespace gs_usb
