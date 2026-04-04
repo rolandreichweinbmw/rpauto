@@ -18,7 +18,7 @@ endif()
 
 pico_sdk_init()
 
-add_compile_options(-Wall)
+add_compile_options(-Wall -Werror)
 
 if (PICO_PLATFORM STREQUAL "host")
   add_subdirectory(test)

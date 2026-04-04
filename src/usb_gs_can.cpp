@@ -180,8 +180,8 @@ static bool handle_setup_stage(uint8_t rhport, tusb_control_request_t const* req
 
     const uint8_t  breq_val = request->bRequest;
     const uint16_t wValue   = request->wValue;
-    const uint16_t wLength  = request->wLength;
-    const bool     dir_in   = (request->bmRequestType_bit.direction == TUSB_DIR_IN);
+    //const uint16_t wLength  = request->wLength;
+    //const bool     dir_in   = (request->bmRequestType_bit.direction == TUSB_DIR_IN);
 
     // Remember for DATA stage
     s_last_breq   = breq_val;
