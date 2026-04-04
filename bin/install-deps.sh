@@ -10,6 +10,6 @@ tar xf ../openocd.tar.gz
 cd ..
 rm openocd.tar.gz
 
-sudo apt install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib
+sudo apt install cmake python3 build-essential gcc-arm-none-eabi libnewlib-arm-none-eabi libstdc++-arm-none-eabi-newlib can-utils
 
 echo "Done."
