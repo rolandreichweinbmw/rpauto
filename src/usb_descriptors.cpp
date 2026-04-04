@@ -65,7 +65,7 @@ static const uint8_t configuration_descriptor[] = {
 // ============================================================================
 static const char* const string_descriptors[] = {
     "\x09\x04",         // 0: Language (English US)
-    "Reichwein.IT,      // 1: Manufacturer
+    "Reichwein.IT",     // 1: Manufacturer
     "USB-CAN-FD",       // 2: Product
     "000000000001",     // 3: Serial Number
 };
